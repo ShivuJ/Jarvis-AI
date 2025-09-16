@@ -1,3 +1,5 @@
+import json
+
 import pyttsx3
 import speech_recognition as sr
 import pyaudio
@@ -7,10 +9,6 @@ engine = pyttsx3.init()
 def speak(audio):
     engine.say(audio)
     engine.runAndWait()
-
-def wish():
-    speak("Welcome back, How may I help you?")
-
 
 def take_command():
     r = sr.Recognizer()
@@ -22,7 +20,9 @@ def take_command():
         try:
             audio = r.listen(source, timeout=5, phrase_time_limit=5)
             print("Recognizing...")
-            query = r.recognize_vosk(audio, language="en")
+            result = r.recognize_google(audio, language="en-in")
+            data = json.loads(result)
+            query = data.get("text", data)
             speak("You said" + query)
 
         except Exception as e:
@@ -31,11 +31,3 @@ def take_command():
             return "None"
 
     return query
-
-
-
-if __name__ == "__main__":
-    wish()
-    while True:
-        query = take_command().lower()
-    # speak("You said: " + query)
