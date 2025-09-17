@@ -9,3 +9,6 @@ if __name__ == "__main__":
 
         if "date" in query:
             commands.date()
+
+        elif "time" in query:
+            commands.time()
