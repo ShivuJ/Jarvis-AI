@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4d4d078b-ed39-434d-9893-96c88fe646d4" name="Changes" comment="Listening function - WIP">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jarvis/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Jarvis/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jarvis/speech.py" beforeDir="false" afterPath="$PROJECT_DIR$/Jarvis/speech.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jarvis/commands.py" beforeDir="false" afterPath="$PROJECT_DIR$/Jarvis/commands.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +133,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Jarvis/commands.py</url>
-          <line>6</line>
+          <line>7</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
