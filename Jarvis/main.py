@@ -3,9 +3,9 @@ import commands
 
 if __name__ == "__main__":
     commands.wish()
+
     while True:
         query = take_command().lower()
-        speak("You said: " + query)
 
         if "date" in query:
             commands.date()
