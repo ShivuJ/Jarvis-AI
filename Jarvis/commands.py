@@ -1,4 +1,5 @@
 import datetime
+import wikipedia
 
 from speech import speak
 
@@ -12,4 +13,19 @@ def time():
     speak(f"The current time is {timenow}")
 
 def wish():
-    speak("Welcome back, How may I help you?")
+    hour = datetime.datetime.now().hour
+    if hour >= 0 and hour < 12:
+        speak("Good morning")
+    elif hour >= 12 and hour < 18:
+        speak("Good afternoon")
+    elif hour >= 18 and hour < 21:
+        speak("Good evening")
+    else:
+        speak("Good night")
+
+def search(query):
+    speak("Searching...")
+    query = query.replace("search ", "")
+    results = wikipedia.summary(query, sentences=5)
+    speak("According to Wikipedia" + results)
+
